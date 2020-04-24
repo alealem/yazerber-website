@@ -1,0 +1,16 @@
+repository: alealem/bizu-llc.ga
+name: yazerber
+baseurl: ""
+url: ""
+markdown: kramdown
+pygments: false
+excerpt_separator: <!--more-->
+paginate: 3
+paginate_path: "blog/page:num"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-fontello
+
+gems:
+  - jekyll-font-awesome-sass
