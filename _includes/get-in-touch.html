@@ -12,15 +12,23 @@
 <div class='full yellow'>
   <div class='form'>
     <div class='row'>
-      <div class='medium-6 large-6 columns'>
-        <input placeholder='NAME' type='text'>
-        <input placeholder='EMAIL' type='text'>
-        <input placeholder='SUBJECT' type='text'>
+      <form action="https://getform.io/f/7132a359-80bf-4a37-917c-61779695139f" method="POST">
+
+        <div class='medium-6 large-6 columns'>
+          <input placeholder='NAME' type="text" name="name" required>
+          <input placeholder='EMAIL' type="email" name="email" required>
+          <input placeholder='SUBJECT' type='text' name="subject" required>
+          <input placeholder='Tel'type="tel" name="tel" required>
+         
+        </div>
+        <div class='medium-6 large-6 columns'>
+          <textarea placeholder='MESSAGE' type="text" name="message" required></textarea>
+          <button class='button white' type="submit">Send</button>
+          <div class="g-recaptcha" data-sitekey="6LcCK-8UAAAAACESpLHfmgG_sGbedHZwV4X1BnLa"></div>
+          <!-- <input type="hidden" id="captchaResponse" name="g-recaptcha-response" /> -->
+        </div>
       </div>
-      <div class='medium-6 large-6 columns'>
-        <textarea placeholder='MESSAGE'></textarea>
-        <input class='button white' type='submit'>
-      </div>
+      </form>
     </div>
   </div>
 </div>
