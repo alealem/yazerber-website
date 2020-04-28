@@ -11,6 +11,40 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: white;
 }
 
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  opacity: 0.8;
+  background-color: #ECF0F1;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  animation: rotation 4s infinite linear;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  height:100px;
+  z-index: 1000;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 h1, h2, h3, h4 {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -459,7 +493,9 @@ textarea {
   color: #666666;
   font-size: 14px;
 }
-
+.footer .grecaptcha-badge {
+  display: none;
+}
 /* slider customization */
 
 .orbit-container .orbit-timer, .orbit-container .orbit-slide-number {

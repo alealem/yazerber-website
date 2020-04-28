@@ -14,17 +14,22 @@
 
       <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap" rel="stylesheet">
       <script src='http://localhost:4000/js/modernizr.js'></script>
-      <script src="https://www.google.com/recaptcha/api.js?render=6LcCK-8UAAAAACESpLHfmgG_sGbedHZwV4X1BnLa"></script>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+
     </head>
     <body>
+      <div id="loading">
+        <img id="loading-image" src="http://localhost:4000/images/logo_icon.svg" alt="Loading..." />
+      </div>
       <div class='contain-to-grid sticky'>
         <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
           <ul class='title-area'>
             <li class='name'>
-              <h1>
-                <img class="logo" src='http://localhost:4000/images/yazerber_logo.svg'>
-                <!-- <a href='/'>yazerber</a> -->
-              </h1>
+              <a href="/index.html">
+                <h1>
+                  <img class="logo" src='http://localhost:4000/images/yazerber_logo.svg'>
+                </h1>
+              </a>
             </li>
             <li class='toggle-topbar menu-icon'>
               <a href='#'>Menu</a>
@@ -79,7 +84,7 @@
       <div class='orbit-caption caption-center'>
         <div class='row'>
           <div class='large-12 columns right'>
-            <h2>This is yazerber</h2> <p>A creative responsive theme.</p> <div class='two spacing'></div> <a class='button boxed'>View Features</a>
+            <h2>This is yazerber</h2> <p>A creative responsive theme.</p> <a class='button boxed'>View Features</a>
           </div>
         </div>
       </div>
@@ -90,7 +95,7 @@
       <div class='orbit-caption caption-center'>
         <div class='row'>
           <div class='large-12 columns right'>
-            <h2>Creative Design</h2> <p>Focus on every detail element.</p> <div class='two spacing'></div> <a class='button boxed'>Learn More</a>
+            <h2>Creative Design</h2> <p>Focus on every detail element.</p> <a class='button boxed'>Learn More</a>
           </div>
         </div>
       </div>
@@ -101,7 +106,7 @@
       <div class='orbit-caption caption-center'>
         <div class='row'>
           <div class='large-12 columns right'>
-            <h2>Responsive Design</h2> <p>Let users access the theme with all devices</p> <div class='two spacing'></div> <a class='button boxed'>Learn More</a>
+            <h2>Responsive Design</h2> <p>Let users access the theme with all devices</p> <a class='button boxed'>Learn More</a>
           </div>
         </div>
       </div>
@@ -112,7 +117,7 @@
       <div class='orbit-caption caption-center'>
         <div class='row'>
           <div class='large-12 columns right'>
-            <h2>Very Easy to Use</h2> <p>Almost every element could be customized</p> <div class='two spacing'></div> <a class='button boxed'>Learn More</a>
+            <h2>Very Easy to Use</h2> <p>Almost every element could be customized</p> <a class='button boxed'>Learn More</a>
           </div>
         </div>
       </div>
@@ -123,7 +128,7 @@
       <div class='orbit-caption caption-center'>
         <div class='row'>
           <div class='large-12 columns right'>
-            <h2>A Beautiful &amp; Creative Theme</h2> <p>Every element is designed attentively</p> <div class='two spacing'></div> <a class='button boxed'>Purchase Now</a>
+            <h2>A Beautiful &amp; Creative Theme</h2> <p>Every element is designed attentively</p> <a class='button boxed'>Purchase Now</a>
           </div>
         </div>
       </div>
@@ -144,28 +149,32 @@
     
       
       <div class='medium-3 large-3 columns icon-text-circle'>
-        <i class='icon-flash'></i>
+        <a href="/services"> <i class='icon-flash'></i></a>
+        <!-- <i class='icon-flash'></i> -->
         <h3>Products Range</h3>
         <p>All of our Sheeps are on pasture for as much of the year as possible. We supplement their diets...</p>
       </div>
     
       
       <div class='medium-3 large-3 columns icon-text-circle'>
-        <i class='icon-layout'></i>
+        <a href="/services"> <i class='icon-layout'></i></a>
+        <!-- <i class='icon-layout'></i> -->
         <h3>Quality Matters</h3>
         <p>We’re determined to keep up the quality of all of our farming products as high as possible.</p>
       </div>
     
       
       <div class='medium-3 large-3 columns icon-text-circle'>
-        <i class='icon-paper-plane'></i>
+        <a href="/services"> <i class='icon-paper-plane'></i></a>
+        <!-- <i class='icon-paper-plane'></i> -->
         <h3>Free Shipping</h3>
         <p>We provide free delivery directly to your door within 1 to 2 days of receiving the order.</p>
       </div>
     
       
       <div class='medium-3 large-3 columns icon-text-circle'>
-        <i class='icon-chat'></i>
+        <a href="/services"> <i class='icon-chat'></i></a>
+        <!-- <i class='icon-chat'></i> -->
         <h3>Customer Satisfaction</h3>
         <p>We guarantee you frash and high quality products. Become one of our thousands of satisfied...</p>
       </div>
@@ -452,9 +461,8 @@
         </div>
         <div class='medium-6 large-6 columns'>
           <textarea placeholder='MESSAGE' type="text" name="message" required></textarea>
+          <div class="g-recaptcha" data-sitekey="6LeJXu8UAAAAABjP8uRCIqXGt1gHGnVGMq_RbwBS"></div>
           <button class='button white' type="submit">Send</button>
-          <div class="g-recaptcha" data-sitekey="6LcCK-8UAAAAACESpLHfmgG_sGbedHZwV4X1BnLa"></div>
-          <!-- <input type="hidden" id="captchaResponse" name="g-recaptcha-response" /> -->
         </div>
       </div>
       </form>
@@ -499,5 +507,10 @@
       <script src='http://localhost:4000/js/jquery.countTo.js'></script>
       <script src='http://localhost:4000/js/jquery.appear.js'></script>
       <script src='http://localhost:4000/js/app.js'></script>
+      <script>
+        $(window).load(function() {
+          $('#loading').hide();
+        });
+      </script>
     </body>
 </html>

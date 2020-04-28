@@ -14,17 +14,22 @@
 
       <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap" rel="stylesheet">
       <script src='{{ site.url }}/js/modernizr.js'></script>
-      <script src="https://www.google.com/recaptcha/api.js?render=6LcCK-8UAAAAACESpLHfmgG_sGbedHZwV4X1BnLa"></script>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+
     </head>
     <body>
+      <div id="loading">
+        <img id="loading-image" src="{{site.url}}/images/logo_icon.svg" alt="Loading..." />
+      </div>
       <div class='contain-to-grid sticky'>
         <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
           <ul class='title-area'>
             <li class='name'>
-              <h1>
-                <img class="logo" src='{{site.url}}/images/yazerber_logo.svg'>
-                <!-- <a href='/'>{{ site.name }}</a> -->
-              </h1>
+              <a href="/index.html">
+                <h1>
+                  <img class="logo" src='{{site.url}}/images/yazerber_logo.svg'>
+                </h1>
+              </a>
             </li>
             <li class='toggle-topbar menu-icon'>
               <a href='#'>Menu</a>
@@ -100,5 +105,10 @@
       <script src='{{ site.url }}/js/jquery.countTo.js'></script>
       <script src='{{ site.url }}/js/jquery.appear.js'></script>
       <script src='{{ site.url }}/js/app.js'></script>
+      <script>
+        $(window).load(function() {
+          $('#loading').hide();
+        });
+      </script>
     </body>
 </html>
