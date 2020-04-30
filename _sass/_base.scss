@@ -1,0 +1,207 @@
+$primary-color:#31B74A;
+$white:#FFFFFF;
+$broken-white:#eeeeee;
+
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.8;
+    background-color: #ECF0F1;
+    z-index: 99;
+    text-align: center;
+  }
+  
+  #loading-image {
+    animation: rotation 4s infinite linear;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    height:100px;
+    z-index: 1000;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+//   .top-bar {
+//     /* height:150px; */
+//   }
+//   /*header */
+//   .top-bar .name h1 img {
+//     margin-top:10px;
+//     width:300px;
+//   }
+//   .top-bar .name h1 a {
+//     display: inline;
+//     padding-left: 10px;
+//     background: #31B74A;
+//   }
+  
+//   .top-bar-section .dropdown li:not(.has-form) a:not(.button) {
+//     height: 60px;
+//     line-height: 60px;
+//   }
+  
+//   .top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
+//     background: #31B74A;
+//     color: #eeeeee;
+//   }
+.top-bar {
+    height: 120px;
+    .title-area{
+        img{
+            margin-left:20px;
+            margin-top:35px;
+            width:300px;
+        }
+        .toggle-topbar{
+            top:-40px;
+        }
+    }
+    .top-bar-section{
+        margin-top:20px;
+        .right{
+           
+            .nav-link-item {
+                .nav-link{
+                    font-family: audiowide;
+                    font-size: 1.1rem;
+                    padding-left: 10px;
+                    &:hover{
+                        background: $primary-color;
+                        color:$white;
+                        
+                    }
+                }
+                .active{
+                    background: $primary-color;
+                }
+            }
+        
+        }
+    }
+}
+/* .orbit-container .orbit-timer, .orbit-container .orbit-slide-number {
+  display: none;
+}
+.orbit-container .orbit-bullets-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+.orbit-container .orbit-slides-container li .orbit-caption {
+  top:30%;
+}
+.orbit-container img {
+  width: 100%;
+}
+
+.caption-right {
+  text-align: right;
+}
+
+.caption-center {
+  text-align: center;
+}
+
+.caption-center-bottom {
+  top:490px !important;
+  text-align: center;
+} 
+
+
+@media only screen and (max-width: 1250px) {
+    .orbit-caption h2, .orbit-caption p {
+      font-size: 18px;
+      position: relative;
+      top: -50px;
+    }
+  }
+  */
+
+.orbit-container{
+    .orbit-timer{
+        display: none;
+    }
+    .orbit-slide-number{
+        display: none;
+    }
+    .orbit-bullets-container {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+    .orbit-slides-container{
+        .orbit-caption{
+            top:30%;
+        }
+    }
+    // img {
+    //     width: 100%;
+    //     background: palegreen;
+    //     object-fit: cover;
+    // }
+
+    .caption-right {
+        text-align: right;
+    }
+      
+    .caption-center {
+        text-align: center;
+    }
+      
+    .caption-center-bottom {
+        top:490px !important;
+        text-align: center;
+    } 
+
+    .sliders{
+        header {
+            height: 100%;
+            width: 100%;
+            background: black;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            opacity: 0.4;
+        }
+        .orbit-caption{
+
+            .title{
+                font-family: audiowide ;
+                color: white;
+                //background-color: #05420566;
+                display: inline-block;
+                padding: 9px 10px 4px;
+                font-size: 2vw;
+                letter-spacing: 3px;
+            }
+            .sub-title{
+                font-size: 1.25vw;
+            }
+            .action{
+                color:$white;
+                background: $primary-color;
+                &:hover{
+                    background: darken($primary-color,15);
+                }
+            }
+        }
+    }
+}
+
+

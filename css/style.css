@@ -11,39 +11,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: white;
 }
 
-#loading {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  display: block;
-  opacity: 0.8;
-  background-color: #ECF0F1;
-  z-index: 99;
-  text-align: center;
-}
-
-#loading-image {
-  animation: rotation 4s infinite linear;
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  margin:auto;
-  height:100px;
-  z-index: 1000;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 
 h1, h2, h3, h4 {
   text-transform: uppercase;
@@ -181,30 +148,7 @@ h1, h2, h3, h4 {
   background-size: cover;
 }
 
-.top-bar {
-  /* height:150px; */
-}
-/*header */
-.top-bar .name h1 img {
-  /*display: inline;*/
-  margin-top:10px;
-  width:300px;
-}
-.top-bar .name h1 a {
-  display: inline;
-  padding-left: 10px;
-  background: #31B74A;
-}
 
-.top-bar-section .dropdown li:not(.has-form) a:not(.button) {
-  height: 60px;
-  line-height: 60px;
-}
-
-.top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
-  background: #31B74A;
-  color: #eeeeee;
-}
 
 /*special title */
 .special-title i {
@@ -498,7 +442,7 @@ textarea {
 }
 /* slider customization */
 
-.orbit-container .orbit-timer, .orbit-container .orbit-slide-number {
+/* .orbit-container .orbit-timer, .orbit-container .orbit-slide-number {
   display: none;
 }
 .orbit-container .orbit-bullets-container {
@@ -524,8 +468,8 @@ textarea {
 .caption-center-bottom {
   top:490px !important;
   text-align: center;
-}
-.slide-overlay{
+} */
+/* .slide-overlay{
   content: '';
     position: absolute;
     width: 100%;
@@ -538,23 +482,23 @@ textarea {
     background: rgba(128, 102, 220, 0.8);
     background-repeat: no-repeat;
     background-size: cover;
-}
-.orbit-caption h2 {
+} */
+/* .orbit-caption h2 {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   display: inline-block;
   padding: 9px 10px 4px;
   font-size: 2.75rem;
   letter-spacing: 3px;
-}
+} */
 
-@media only screen and (max-width: 1250px) {
+/* @media only screen and (max-width: 1250px) {
   .orbit-caption h2, .orbit-caption p {
     font-size: 18px;
     position: relative;
     top: -50px;
   }
-}
+} */
 
 .testimonials .orbit-container .orbit-bullets-container {
   position: static;

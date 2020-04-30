@@ -6,17 +6,18 @@
       <title>{{ page.title }}</title>
       <meta content='width=device-width, initial-scale=1.0' name='viewport'>
       <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap" rel="stylesheet">
       <link href='{{ site.url }}/css/framework.css' rel='stylesheet'>
       <link href='{{ site.url }}/css/syntax.css' rel='stylesheet'>
       <link href='{{ site.url }}/css/style.css' rel='stylesheet'>
+      <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
       <link href='{{ site.url }}/css/fontello.css' rel='stylesheet'>
       <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"  type="text/css">
       <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png">
-      <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap" rel="stylesheet">
-      <script src='{{ site.url }}/js/modernizr.js'></script>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="theme-color" content="#ffffff">
+      <script src='{{ site.url }}/js/modernizr.js'></script>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
     </head>
     <body>
       <div id="loading">
@@ -24,14 +25,12 @@
       </div>
       <div class='contain-to-grid sticky'>
         <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+          <div class='title-area'>
+            <a href="/index.html">
+              <img class="logo" src='{{site.url}}/images/yazerber_logo.svg'>
+            </a>
+          </div>
           <ul class='title-area'>
-            <li class='name'>
-              <a href="/index.html">
-                <h1>
-                  <img class="logo" src='{{site.url}}/images/yazerber_logo.svg'>
-                </h1>
-              </a>
-            </li>
             <li class='toggle-topbar menu-icon'>
               <a href='#'>Menu</a>
             </li>
@@ -46,8 +45,8 @@
                 {% endif %}
 
                 {% if item.children %}
-                  <li class="has-dropdown {{active_class}}">
-                    <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+                  <li class="has-dropdown {{active_class}} nav-link-item">
+                    <a class="nav-link" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
                     <ul class='dropdown'>
                       {% for child in item.children %}
                         <li>
@@ -57,8 +56,8 @@
                     </ul>
                   </li>
                 {% else %}
-                  <li class="{{active_class}}">
-                    <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+                  <li class="{{active_class}} nav-link-item">
+                    <a class="nav-link" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
                   </li>
                 {% endif %}
               {% endfor %}

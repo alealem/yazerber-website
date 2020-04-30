@@ -1,15 +1,20 @@
 
-<ul data-orbit=''>
+<ul class="sliders" data-orbit=''>
   {% for slide in site.data.slides %}
-    <li >
-      <img src="{{site.url}}/images/{{slide.image}}" />
-      <div class='orbit-caption caption-{{ slide.desc_location }}'>
-        <div class='row'>
-          <div class='large-12 columns right'>
-            {{ slide.desc }}
+    <li>
+      <header>
+        <img  src="{{site.url}}/images/{{slide.image}}" />
+        <section class='hero-header-text'>
+          <div class='orbit-caption caption-{{ slide.desc_location }}'>
+            <div class='row'>
+              <div class='large-12 columns right'>
+                {{ slide.desc }}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+       </section>
+      </header>
+
     </li>
   {% endfor %}
 </ul>
