@@ -1,3 +1,4 @@
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: white;
 }
@@ -117,10 +118,6 @@ h1, h2, h3, h4 {
   background-size: cover;
 }
 
-.bg-4 {
-  background: url(../images/bg-4.jpg) center center no-repeat;
-  background-size: cover;
-}
 
 .bg-3-overlay:before {
   position: absolute;
@@ -415,7 +412,7 @@ textarea {
 }
 
 /*footer */
-.footer {
+/* .footer {
   background: #232323;
   padding: 40px 0 20px;
 }
@@ -430,7 +427,7 @@ textarea {
 .footer span {
   color: red;
   font-size: 48px;
-}
+} */
 
 /* .footer p.copyright {
   padding: 40px 0 0;

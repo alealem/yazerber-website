@@ -27,95 +27,97 @@
   <div id="loading">
     <img id="loading-image" src="{{site.url}}/images/logo_icon.svg" alt="Loading..." />
   </div>
-  <div class='contain-to-grid sticky'>
-    <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
-      <div class='title-area'>
-        <a href="/index.html">
-          <img class="logo" src='{{site.url}}/images/yazerber_logo.svg'>
-        </a>
-      </div>
-      <ul class='title-area'>
-        <li class='toggle-topbar menu-icon'>
-          <a href='#'>Menu</a>
-        </li>
-      </ul>
-      <section class='top-bar-section'>
-        <ul class="right">
-          {% for item in site.data.nav %}
-          {% if item.section_id == page.section_id %}
-          {% assign active_class = "active" %}
-          {% else %}
-          {% assign active_class = "" %}
-          {% endif %}
+  <div id="page-container">
+    <div id="content-wrap">
+      <div class='contain-to-grid sticky'>
+        <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+          <div class='title-area'>
+            <a href="/index.html">
+              <img class="logo" src='{{site.url}}/images/yazerber_logo.svg'>
+            </a>
+          </div>
+          <ul class='title-area'>
+            <li class='toggle-topbar menu-icon'>
+              <a href='#'>Menu</a>
+            </li>
+          </ul>
+          <section class='top-bar-section'>
+            <ul class="right">
+              {% for item in site.data.nav %}
+              {% if item.section_id == page.section_id %}
+              {% assign active_class = "active" %}
+              {% else %}
+              {% assign active_class = "" %}
+              {% endif %}
 
-          {% if item.children %}
-          <li class="has-dropdown {{active_class}} nav-link-item">
-            <a class="nav-link" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
-            <ul class='dropdown'>
-              {% for child in item.children %}
-              <li>
-                <a href="{{site.url}}/{{ child.path }}">{{ child.name }}</a>
+              {% if item.children %}
+              <li class="has-dropdown {{active_class}} nav-link-item">
+                <a class="nav-link" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+                <ul class='dropdown'>
+                  {% for child in item.children %}
+                  <li>
+                    <a href="{{site.url}}/{{ child.path }}">{{ child.name }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
               </li>
+              {% else %}
+              <li class="{{active_class}} nav-link-item">
+                <a class="nav-link" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+              </li>
+              {% endif %}
               {% endfor %}
             </ul>
-          </li>
-          {% else %}
-          <li class="{{active_class}} nav-link-item">
-            <a class="nav-link" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
-          </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-    </nav>
-  </div>
+          </section>
+        </nav>
+      </div>
 
 
   {{ content }}
 
-
-  <div class='footer-container'>
-    <div class='footer-item item-left'>
-      <p><i class="icon-phone "></i> +251111555555</p>
-      <p><i class="icon-phone"></i> +251911243302</p>
-      <p>Bole, Addis Ababa, Ethiopia</p>
-      <p>PoBox: 1078</p>
     </div>
-    <div class='footer-item item-center'>
-      <div class="item-center-content footer-logo">
-        <a href="index.html">YAZERBER</a>
+    <div id="footer" class='footer-container'>
+      <div class='footer-item item-left'>
+        <p><i class="icon-phone "></i> +251111555555</p>
+        <p><i class="icon-phone"></i> +251911243302</p>
+        <p>Bole, Addis Ababa, Ethiopia</p>
+        <p>PoBox: 1078</p>
       </div>
-      <div class='item-center-content socials'>
-        <a href='https://twitter.com/yazerber'>
-          <i class='icon-twitter yellow'></i>
-        </a>
-        <a href='https://www.facebook.com/Yazerber-Animal-Production-Center-105053814222185'>
-          <i class='icon-facebook yellow'></i>
-        </a>
-        <a href='#'>
-          <i class='icon-linkedin yellow'></i>
-        </a>
-        <a href='#'>
-          <i class='icon-instagram yellow'></i>
-        </a>
-        <a href='#'>
-          <i class='icon-pinterest yellow'></i>
-        </a>
-        <a href='mailto:yazerber@gmail.com' mail-to>
-          <i class='icon-mail yellow'></i>
-        </a>
+      <div class='footer-item item-center'>
+        <div class="item-center-content footer-logo">
+          <a href="index.html">YAZERBER</a>
+        </div>
+        <div class='item-center-content socials'>
+          <a href='https://twitter.com/yazerber'>
+            <i class='icon-twitter yellow'></i>
+          </a>
+          <a href='https://www.facebook.com/Yazerber-Animal-Production-Center-105053814222185'>
+            <i class='icon-facebook yellow'></i>
+          </a>
+          <a href='#'>
+            <i class='icon-linkedin yellow'></i>
+          </a>
+          <a href='#'>
+            <i class='icon-instagram yellow'></i>
+          </a>
+          <a href='#'>
+            <i class='icon-pinterest yellow'></i>
+          </a>
+          <a href='mailto:yazerber@gmail.com' mail-to>
+            <i class='icon-mail yellow'></i>
+          </a>
+        </div>
+        <div class='item-center-content copyright'>
+          <em>Copyright 2020 YAZER<em class="ber">BER</em> PLC</em>
+        </div>
       </div>
-      <div class='item-center-content copyright'>
-        <p>Copyright 2020 Yazerber Plc</p>
+      <div class='footer-item item-right'>
+        {% for item in site.data.nav %}
+        <a class="nav-links" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+        {% endfor %}
       </div>
-    </div>
-    <div class='footer-item item-right'>
-      {% for item in site.data.nav %}
-      <a class="nav-links" href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
-      {% endfor %}
     </div>
   </div>
-
   <script src='{{ site.url }}/js/jquery.min.js'></script>
   <script src='{{ site.url }}/js/foundation.min.js'></script>
   <script src='{{ site.url }}/js/jquery.countTo.js'></script>
