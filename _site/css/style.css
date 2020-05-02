@@ -432,14 +432,12 @@ textarea {
   font-size: 48px;
 }
 
-.footer p.copyright {
+/* .footer p.copyright {
   padding: 40px 0 0;
   color: #666666;
   font-size: 14px;
-}
-.footer .grecaptcha-badge {
-  display: none;
-}
+} */
+
 /* slider customization */
 
 /* .orbit-container .orbit-timer, .orbit-container .orbit-slide-number {

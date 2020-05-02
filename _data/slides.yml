@@ -3,7 +3,7 @@
   desc:
     <h2 class='title'>CHANGING THE LANDSCAPE FOR GOOD</h2>
     <p class='sub-title'>A creative responsive theme.</p>
-    <a class='button boxed action'>Read More</a>
+    <span><a class='button boxed action'>Read More</a></span>
 - image: slide-2.jpg
   desc_location: center
   desc:
