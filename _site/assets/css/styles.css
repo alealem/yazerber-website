@@ -12,16 +12,13 @@
 
 @media only screen and (max-width: 900px) { #content-wrap { padding-bottom: 35rem; }
   #footer { position: absolute; bottom: 0; width: 100%; height: 35rem; } }
-.top-bar { height: 120px; }
-.top-bar .title-area img { margin-left: 20px; margin-top: 35px; width: 300px; }
-.top-bar .title-area .toggle-topbar { top: -40px; }
-.top-bar .top-bar-section { margin-top: 20px; }
+.top-bar .title-area img { margin-left: 20px; width: 300px; }
+.top-bar .title-area .toggle-topbar { top: -50px; }
 .top-bar .top-bar-section .right .nav-link-item .nav-link { font-family: audiowide; font-size: 1.1rem; padding-left: 10px; }
 .top-bar .top-bar-section .right .nav-link-item .nav-link:hover { background: #31B74A; color: #FFFFFF; }
 .top-bar .top-bar-section .right .nav-link-item .active { background: #31B74A; }
 
-@media only screen and (max-width: 1024px) { .top-bar .title-area img { margin-top: 15px; width: 200px; }
-  .top-bar-section { margin-top: 15px; } }
+@media only screen and (max-width: 1024px) { .top-bar .title-area img { width: 200px; } }
 .orbit-container .orbit-timer { display: none; }
 .orbit-container .orbit-slide-number { display: none; }
 .orbit-container .orbit-bullets-container { position: absolute; bottom: 20px; width: 100%; }
